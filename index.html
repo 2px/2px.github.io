@@ -191,6 +191,58 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-zepto点透问题" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/03/21/zepto点透问题/" class="article-date">
+  	<time datetime="2015-03-21T07:14:35.000Z" itemprop="datePublished">2015-03-21</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/03/21/zepto点透问题/">zepto点透问题</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="为什么会有点透">为什么会有点透</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#20107;&#20214;&#30340;&#35302;&#21457;&#26102;&#38388;&#25353;&#30001;&#26089;&#21040;&#26202;&#25490;&#21015;&#20026;&#65306;touchstart &#26089;&#20110; touchend &#26089;&#20110; click&#65292;&#35302;&#21457;touchend&#20882;&#27873;&#21040;&#19979;&#19968;&#20010;dom&#23601;&#20250;&#20986;&#29616;&#28857;&#36879;</span><br></pre></td></tr></table></figure>
+<h2 id="解决方案">解决方案</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1.&#32452;&#32455;dom&#30340;touchend&#40664;&#35748;&#20107;&#20214;&#65307;if(eve == &#34;touchsend&#34;) e.preventDefault();</span><br></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2.&#20351;&#29992;fastclick&#24211;&#65292;&#30452;&#25509;&#29992;click&#32465;&#23450;&#20107;&#20214;&#65292;&#20043;&#21518;&#19968;&#21477;&#35805;&#25630;&#23450;&#65306;FastClick.attach(document.body);&#65288;&#21407;&#29702;&#26159;&#22312;touchend&#30452;&#25509;&#35302;&#21457;click&#20107;&#20214;&#65292;&#21518;&#32493;e.preventDefault&#36824;&#26159;&#26159;&#26377;&#25928;&#30340;&#65289;</span><br></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3.&#26032;&#29256;&#26412;&#30340;zepto&#20462;&#22797;&#35813;bug</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+  
     <article id="post-IE兼容性" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
