@@ -5,15 +5,27 @@
   
   <title>zepto点透问题 | 两个像素</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="为什么会有点透1&amp;#20107;&amp;#20214;&amp;#30340;&amp;#35302;&amp;#21457;&amp;#26102;&amp;#38388;&amp;#25353;&amp;#30001;&amp;#26089;&amp;#21040;&amp;#26202;&amp;#25490;&amp;#21015;&amp;#20026;&amp;#65306;touchstart &amp;#26089;&amp;#20110; touchend &amp;#26089;&amp;#20110; click&amp;#652">
+  <meta name="description" content="为什么会有点透&amp;gt;事件的触发时间按由早到晚排列为：touchstart 早于 touchend 早于 click，触发touchend冒泡到下一个dom就会出现点透
+解决方案
+1.组织dom的touchend默认事件；if(eve == “touchsend”) e.preventDefault();
+
+2.使用fastclick库，直接用click绑定事件，之后一句话搞定：FastClick">
 <meta property="og:type" content="article">
 <meta property="og:title" content="zepto点透问题">
 <meta property="og:url" content="http://2px.github.io/2015/03/21/zepto点透问题/index.html">
 <meta property="og:site_name" content="两个像素">
-<meta property="og:description" content="为什么会有点透1&amp;#20107;&amp;#20214;&amp;#30340;&amp;#35302;&amp;#21457;&amp;#26102;&amp;#38388;&amp;#25353;&amp;#30001;&amp;#26089;&amp;#21040;&amp;#26202;&amp;#25490;&amp;#21015;&amp;#20026;&amp;#65306;touchstart &amp;#26089;&amp;#20110; touchend &amp;#26089;&amp;#20110; click&amp;#652">
+<meta property="og:description" content="为什么会有点透&amp;gt;事件的触发时间按由早到晚排列为：touchstart 早于 touchend 早于 click，触发touchend冒泡到下一个dom就会出现点透
+解决方案
+1.组织dom的touchend默认事件；if(eve == “touchsend”) e.preventDefault();
+
+2.使用fastclick库，直接用click绑定事件，之后一句话搞定：FastClick">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="zepto点透问题">
-<meta name="twitter:description" content="为什么会有点透1&amp;#20107;&amp;#20214;&amp;#30340;&amp;#35302;&amp;#21457;&amp;#26102;&amp;#38388;&amp;#25353;&amp;#30001;&amp;#26089;&amp;#21040;&amp;#26202;&amp;#25490;&amp;#21015;&amp;#20026;&amp;#65306;touchstart &amp;#26089;&amp;#20110; touchend &amp;#26089;&amp;#20110; click&amp;#652">
+<meta name="twitter:description" content="为什么会有点透&amp;gt;事件的触发时间按由早到晚排列为：touchstart 早于 touchend 早于 click，触发touchend冒泡到下一个dom就会出现点透
+解决方案
+1.组织dom的touchend默认事件；if(eve == “touchsend”) e.preventDefault();
+
+2.使用fastclick库，直接用click绑定事件，之后一句话搞定：FastClick">
   
     <link rel="alternative" href="/atom.xml" title="两个像素" type="application/atom+xml">
   
@@ -185,10 +197,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="为什么会有点透">为什么会有点透</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#20107;&#20214;&#30340;&#35302;&#21457;&#26102;&#38388;&#25353;&#30001;&#26089;&#21040;&#26202;&#25490;&#21015;&#20026;&#65306;touchstart &#26089;&#20110; touchend &#26089;&#20110; click&#65292;&#35302;&#21457;touchend&#20882;&#27873;&#21040;&#19979;&#19968;&#20010;dom&#23601;&#20250;&#20986;&#29616;&#28857;&#36879;</span><br></pre></td></tr></table></figure>
-<h2 id="解决方案">解决方案</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1.&#32452;&#32455;dom&#30340;touchend&#40664;&#35748;&#20107;&#20214;&#65307;if(eve == &#34;touchsend&#34;) e.preventDefault();</span><br></pre></td></tr></table></figure>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2.&#20351;&#29992;fastclick&#24211;&#65292;&#30452;&#25509;&#29992;click&#32465;&#23450;&#20107;&#20214;&#65292;&#20043;&#21518;&#19968;&#21477;&#35805;&#25630;&#23450;&#65306;FastClick.attach(document.body);&#65288;&#21407;&#29702;&#26159;&#22312;touchend&#30452;&#25509;&#35302;&#21457;click&#20107;&#20214;&#65292;&#21518;&#32493;e.preventDefault&#36824;&#26159;&#26159;&#26377;&#25928;&#30340;&#65289;</span><br></pre></td></tr></table></figure>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3.&#26032;&#29256;&#26412;&#30340;zepto&#20462;&#22797;&#35813;bug</span><br></pre></td></tr></table></figure>
+        <h2 id="为什么会有点透">为什么会有点透</h2><p>&gt;<br>事件的触发时间按由早到晚排列为：touchstart 早于 touchend 早于 click，触发touchend冒泡到下一个dom就会出现点透</p>
+<h2 id="解决方案">解决方案</h2><ul>
+<li><p>1.组织dom的touchend默认事件；if(eve == “touchsend”) e.preventDefault();</p>
+</li>
+<li><p>2.使用fastclick库，直接用click绑定事件，之后一句话搞定：FastClick.attach(document.body);（原理是在touchend直接触发click事件，后续e.preventDefault还是是有效的）</p>
+</li>
+<li><p>3.新版本的zepto修复该bug</p>
+</li>
+</ul>
 
       
     </div>

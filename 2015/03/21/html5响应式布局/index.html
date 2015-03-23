@@ -5,18 +5,48 @@
   
   <title>html5响应式布局 | 两个像素</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="响应式布局1&amp;#19968;&amp;#20010;&amp;#32593;&amp;#31449;&amp;#33021;&amp;#22815;&amp;#20860;&amp;#23481;&amp;#22810;&amp;#20010;&amp;#32456;&amp;#31471;
-优点1&amp;#38754;&amp;#23545;&amp;#19981;&amp;#21516;&amp;#20998;&amp;#36776;&amp;#29575;&amp;#35774;&amp;#22791;&amp;#28789;&amp;#27963;&amp;#2461">
+  <meta name="description" content="响应式布局&amp;gt;一个网站能够兼容多个终端
+优点
+面对不同分辨率设备灵活性强
+能够快捷解决多设备显示适应问题
+
+缺点
+兼容各种设备工作量大，效率低下
+代码累赘，会出现隐藏无用的元素，加载时间加长
+其实这是一种折衷性质的设计解决方案，多方面因素影响而达不到最佳效果
+一定程度上改变了网站原有的布局结构，会出现用户混淆的情况
+
+Media Query（媒介查询）&amp;gt;设备的宽和高device-widt">
 <meta property="og:type" content="article">
 <meta property="og:title" content="html5响应式布局">
 <meta property="og:url" content="http://2px.github.io/2015/03/21/html5响应式布局/index.html">
 <meta property="og:site_name" content="两个像素">
-<meta property="og:description" content="响应式布局1&amp;#19968;&amp;#20010;&amp;#32593;&amp;#31449;&amp;#33021;&amp;#22815;&amp;#20860;&amp;#23481;&amp;#22810;&amp;#20010;&amp;#32456;&amp;#31471;
-优点1&amp;#38754;&amp;#23545;&amp;#19981;&amp;#21516;&amp;#20998;&amp;#36776;&amp;#29575;&amp;#35774;&amp;#22791;&amp;#28789;&amp;#27963;&amp;#2461">
+<meta property="og:description" content="响应式布局&amp;gt;一个网站能够兼容多个终端
+优点
+面对不同分辨率设备灵活性强
+能够快捷解决多设备显示适应问题
+
+缺点
+兼容各种设备工作量大，效率低下
+代码累赘，会出现隐藏无用的元素，加载时间加长
+其实这是一种折衷性质的设计解决方案，多方面因素影响而达不到最佳效果
+一定程度上改变了网站原有的布局结构，会出现用户混淆的情况
+
+Media Query（媒介查询）&amp;gt;设备的宽和高device-widt">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="html5响应式布局">
-<meta name="twitter:description" content="响应式布局1&amp;#19968;&amp;#20010;&amp;#32593;&amp;#31449;&amp;#33021;&amp;#22815;&amp;#20860;&amp;#23481;&amp;#22810;&amp;#20010;&amp;#32456;&amp;#31471;
-优点1&amp;#38754;&amp;#23545;&amp;#19981;&amp;#21516;&amp;#20998;&amp;#36776;&amp;#29575;&amp;#35774;&amp;#22791;&amp;#28789;&amp;#27963;&amp;#2461">
+<meta name="twitter:description" content="响应式布局&amp;gt;一个网站能够兼容多个终端
+优点
+面对不同分辨率设备灵活性强
+能够快捷解决多设备显示适应问题
+
+缺点
+兼容各种设备工作量大，效率低下
+代码累赘，会出现隐藏无用的元素，加载时间加长
+其实这是一种折衷性质的设计解决方案，多方面因素影响而达不到最佳效果
+一定程度上改变了网站原有的布局结构，会出现用户混淆的情况
+
+Media Query（媒介查询）&amp;gt;设备的宽和高device-widt">
   
     <link rel="alternative" href="/atom.xml" title="两个像素" type="application/atom+xml">
   
@@ -188,11 +218,38 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="响应式布局">响应式布局</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#19968;&#20010;&#32593;&#31449;&#33021;&#22815;&#20860;&#23481;&#22810;&#20010;&#32456;&#31471;</span><br></pre></td></tr></table></figure>
-<h3 id="优点">优点</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#38754;&#23545;&#19981;&#21516;&#20998;&#36776;&#29575;&#35774;&#22791;&#28789;&#27963;&#24615;&#24378;&#10;&#33021;&#22815;&#24555;&#25463;&#35299;&#20915;&#22810;&#35774;&#22791;&#26174;&#31034;&#36866;&#24212;&#38382;&#39064;</span><br></pre></td></tr></table></figure>
-<h3 id="缺点">缺点</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#20860;&#23481;&#21508;&#31181;&#35774;&#22791;&#24037;&#20316;&#37327;&#22823;&#65292;&#25928;&#29575;&#20302;&#19979;&#10;&#20195;&#30721;&#32047;&#36184;&#65292;&#20250;&#20986;&#29616;&#38544;&#34255;&#26080;&#29992;&#30340;&#20803;&#32032;&#65292;&#21152;&#36733;&#26102;&#38388;&#21152;&#38271;&#10;&#20854;&#23454;&#36825;&#26159;&#19968;&#31181;&#25240;&#34935;&#24615;&#36136;&#30340;&#35774;&#35745;&#35299;&#20915;&#26041;&#26696;&#65292;&#22810;&#26041;&#38754;&#22240;&#32032;&#24433;&#21709;&#32780;&#36798;&#19981;&#21040;&#26368;&#20339;&#25928;&#26524;&#10;&#19968;&#23450;&#31243;&#24230;&#19978;&#25913;&#21464;&#20102;&#32593;&#31449;&#21407;&#26377;&#30340;&#24067;&#23616;&#32467;&#26500;&#65292;&#20250;&#20986;&#29616;&#29992;&#25143;&#28151;&#28102;&#30340;&#24773;&#20917;</span><br></pre></td></tr></table></figure>
-<h3 id="Media_Query（媒介查询）">Media Query（媒介查询）</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#10;&#35774;&#22791;&#30340;&#23485;&#21644;&#39640;device-width&#65292;device-heigth&#26174;&#31034;&#23631;&#24149;/&#35302;&#35273;&#35774;&#22791;&#12290;&#10;&#10;&#28210;&#26579;&#31383;&#21475;&#30340;&#23485;&#21644;&#39640;width&#65292;heigth&#26174;&#31034;&#23631;&#24149;/&#35302;&#35273;&#35774;&#22791;&#12290;&#10;&#10;&#35774;&#22791;&#30340;&#25163;&#25345;&#26041;&#21521;&#65292;&#27178;&#21521;&#36824;&#26159;&#31446;&#21521;orientation(portrait|&#10;lanscape)&#21644;&#25171;&#21360;&#26426;&#31561;&#12290;&#10;&#10;&#30011;&#38754;&#27604;&#20363;aspect-ratio&#28857;&#38453;&#25171;&#21360;&#26426;&#31561;&#12290;&#10;&#10;&#35774;&#22791;&#27604;&#20363;device-aspect-ratio-&#28857;&#38453;&#25171;&#21360;&#26426;&#31561;&#12290;&#10;&#10;&#23545;&#35937;&#39068;&#33394;&#25110;&#39068;&#33394;&#21015;&#34920;color&#65292;color-index&#26174;&#31034;&#23631;&#24149;&#12290;&#10;&#10;&#35774;&#22791;&#30340;&#20998;&#36776;&#29575;resolution</span><br></pre></td></tr></table></figure>
-<h3 id="实现">实现</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#9;&#10;width &#8211; viewport&#30340;&#23485;&#24230;&#10;&#10;height &#8211; viewport&#30340;&#39640;&#24230;&#10;&#10;initial-scale &#8211; &#21021;&#22987;&#30340;&#32553;&#25918;&#27604;&#20363;&#10;&#10;minimum-scale &#8211; &#20801;&#35768;&#29992;&#25143;&#32553;&#25918;&#21040;&#30340;&#26368;&#23567;&#27604;&#20363;&#10;&#10;maximum-scale &#8211; &#20801;&#35768;&#29992;&#25143;&#32553;&#25918;&#21040;&#30340;&#26368;&#22823;&#27604;&#20363;&#10;&#10;user-scalable &#8211; &#29992;&#25143;&#26159;&#21542;&#21487;&#20197;&#25163;&#21160;&#32553;&#25918;&#10;&#10;&#60;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34;&#62;&#10;&#10;&#22914;&#65306;&#10;&#10;@media (min-device-width:1024px) and (max-width:989px),screen and (max-device-width:480px),(max-device-width:480px)&#10;and (orientation:landscape),(min-device-width:480px) and (max-device-width:1024px) and (orientation:portrait) &#123;srules&#125;</span><br></pre></td></tr></table></figure>
+        <h3 id="响应式布局">响应式布局</h3><p>&gt;<br>一个网站能够兼容多个终端</p>
+<h3 id="优点">优点</h3><ul>
+<li>面对不同分辨率设备灵活性强</li>
+<li>能够快捷解决多设备显示适应问题</li>
+</ul>
+<h3 id="缺点">缺点</h3><ul>
+<li>兼容各种设备工作量大，效率低下</li>
+<li>代码累赘，会出现隐藏无用的元素，加载时间加长</li>
+<li>其实这是一种折衷性质的设计解决方案，多方面因素影响而达不到最佳效果</li>
+<li>一定程度上改变了网站原有的布局结构，会出现用户混淆的情况</li>
+</ul>
+<h3 id="Media_Query（媒介查询）">Media Query（媒介查询）</h3><p>&gt;<br>设备的宽和高device-width，device-heigth显示屏幕/触觉设备。<br>&gt;<br>渲染窗口的宽和高width，heigth显示屏幕/触觉设备。<br>&gt;<br>设备的手持方向，横向还是竖向orientation(portrait|<br>lanscape)和打印机等。<br>&gt;<br>画面比例aspect-ratio点阵打印机等。<br>&gt;<br>设备比例device-aspect-ratio-点阵打印机等。<br>&gt;<br>对象颜色或颜色列表color，color-index显示屏幕。<br>&gt;<br>设备的分辨率resolution</p>
+<h3 id="实现">实现</h3><ul>
+<li><p>width – viewport的宽度</p>
+</li>
+<li><p>height – viewport的高度</p>
+</li>
+<li><p>initial-scale – 初始的缩放比例</p>
+</li>
+<li><p>minimum-scale – 允许用户缩放到的最小比例</p>
+</li>
+<li><p>maximum-scale – 允许用户缩放到的最大比例</p>
+</li>
+<li><p>user-scalable – 用户是否可以手动缩放</p>
+</li>
+</ul>
+<p>&gt;<br>\<meta name="viewport" content="width=device-width, initial-scale=1.0" \=""></p>
+<blockquote>
+<p>如：</p>
+<p>@media (min-device-width:1024px) and (max-width:989px),screen and (max-device-width:480px),(max-device-width:480px)<br>and (orientation:landscape),(min-device-width:480px) and (max-device-width:1024px) and (orientation:portrait) {srules}</p>
+</blockquote>
+
       
     </div>
     
@@ -200,6 +257,15 @@
   
     
 <nav id="article-nav">
+  
+    <a href="/2015/03/23/XMLHttpRequest对象解析/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          XMLHttpRequest对象解析
+        
+      </div>
+    </a>
   
   
     <a href="/2015/03/21/zepto点透问题/" id="article-nav-older" class="article-nav-link-wrap">
