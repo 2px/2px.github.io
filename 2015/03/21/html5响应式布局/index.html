@@ -5,7 +5,9 @@
   
   <title>html5响应式布局 | 两个像素</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="响应式布局&amp;gt;一个网站能够兼容多个终端
+  <meta name="description" content="响应式布局
+一个网站能够兼容多个终端
+
 优点
 面对不同分辨率设备灵活性强
 能够快捷解决多设备显示适应问题
@@ -16,12 +18,15 @@
 其实这是一种折衷性质的设计解决方案，多方面因素影响而达不到最佳效果
 一定程度上改变了网站原有的布局结构，会出现用户混淆的情况
 
-Media Query（媒介查询）&amp;gt;设备的宽和高device-widt">
+Media Query（媒介查询）
+设备的宽和高device-width，dev">
 <meta property="og:type" content="article">
 <meta property="og:title" content="html5响应式布局">
 <meta property="og:url" content="http://2px.github.io/2015/03/21/html5响应式布局/index.html">
 <meta property="og:site_name" content="两个像素">
-<meta property="og:description" content="响应式布局&amp;gt;一个网站能够兼容多个终端
+<meta property="og:description" content="响应式布局
+一个网站能够兼容多个终端
+
 优点
 面对不同分辨率设备灵活性强
 能够快捷解决多设备显示适应问题
@@ -32,10 +37,13 @@ Media Query（媒介查询）&amp;gt;设备的宽和高device-widt">
 其实这是一种折衷性质的设计解决方案，多方面因素影响而达不到最佳效果
 一定程度上改变了网站原有的布局结构，会出现用户混淆的情况
 
-Media Query（媒介查询）&amp;gt;设备的宽和高device-widt">
+Media Query（媒介查询）
+设备的宽和高device-width，dev">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="html5响应式布局">
-<meta name="twitter:description" content="响应式布局&amp;gt;一个网站能够兼容多个终端
+<meta name="twitter:description" content="响应式布局
+一个网站能够兼容多个终端
+
 优点
 面对不同分辨率设备灵活性强
 能够快捷解决多设备显示适应问题
@@ -46,7 +54,8 @@ Media Query（媒介查询）&amp;gt;设备的宽和高device-widt">
 其实这是一种折衷性质的设计解决方案，多方面因素影响而达不到最佳效果
 一定程度上改变了网站原有的布局结构，会出现用户混淆的情况
 
-Media Query（媒介查询）&amp;gt;设备的宽和高device-widt">
+Media Query（媒介查询）
+设备的宽和高device-width，dev">
   
     <link rel="alternative" href="/atom.xml" title="两个像素" type="application/atom+xml">
   
@@ -218,7 +227,9 @@ Media Query（媒介查询）&amp;gt;设备的宽和高device-widt">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="响应式布局">响应式布局</h3><p>&gt;<br>一个网站能够兼容多个终端</p>
+        <h3 id="响应式布局">响应式布局</h3><blockquote>
+<p>一个网站能够兼容多个终端</p>
+</blockquote>
 <h3 id="优点">优点</h3><ul>
 <li>面对不同分辨率设备灵活性强</li>
 <li>能够快捷解决多设备显示适应问题</li>
@@ -229,7 +240,15 @@ Media Query（媒介查询）&amp;gt;设备的宽和高device-widt">
 <li>其实这是一种折衷性质的设计解决方案，多方面因素影响而达不到最佳效果</li>
 <li>一定程度上改变了网站原有的布局结构，会出现用户混淆的情况</li>
 </ul>
-<h3 id="Media_Query（媒介查询）">Media Query（媒介查询）</h3><p>&gt;<br>设备的宽和高device-width，device-heigth显示屏幕/触觉设备。<br>&gt;<br>渲染窗口的宽和高width，heigth显示屏幕/触觉设备。<br>&gt;<br>设备的手持方向，横向还是竖向orientation(portrait|<br>lanscape)和打印机等。<br>&gt;<br>画面比例aspect-ratio点阵打印机等。<br>&gt;<br>设备比例device-aspect-ratio-点阵打印机等。<br>&gt;<br>对象颜色或颜色列表color，color-index显示屏幕。<br>&gt;<br>设备的分辨率resolution</p>
+<h3 id="Media_Query（媒介查询）">Media Query（媒介查询）</h3><blockquote>
+<p>设备的宽和高device-width，device-heigth显示屏幕/触觉设备。</p>
+<p>渲染窗口的宽和高width，heigth显示屏幕/触觉设备。</p>
+<p>设备的手持方向，横向还是竖向orientation(portrait|<br>lanscape)和打印机等。</p>
+<p>画面比例aspect-ratio点阵打印机等。</p>
+<p>设备比例device-aspect-ratio-点阵打印机等。</p>
+<p>对象颜色或颜色列表color，color-index显示屏幕。</p>
+<p>设备的分辨率resolution</p>
+</blockquote>
 <h3 id="实现">实现</h3><ul>
 <li><p>width – viewport的宽度</p>
 </li>
@@ -244,10 +263,11 @@ Media Query（媒介查询）&amp;gt;设备的宽和高device-widt">
 <li><p>user-scalable – 用户是否可以手动缩放</p>
 </li>
 </ul>
-<p>&gt;<br>\<meta name="viewport" content="width=device-width, initial-scale=1.0" \=""></p>
 <blockquote>
-<p>如：</p>
-<p>@media (min-device-width:1024px) and (max-width:989px),screen and (max-device-width:480px),(max-device-width:480px)<br>and (orientation:landscape),(min-device-width:480px) and (max-device-width:1024px) and (orientation:portrait) {srules}</p>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" \="">
+
+
+<p>如：<br>@media (min-device-width:1024px) and (max-width:989px),screen and (max-device-width:480px),(max-device-width:480px)<br>and (orientation:landscape),(min-device-width:480px) and (max-device-width:1024px) and (orientation:portrait) {srules}</p>
 </blockquote>
 
       
